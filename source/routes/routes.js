@@ -23,7 +23,7 @@ router.get('/',async (req,res)=>{
         })
     }
     catch(error){
-        throw error;
+        return res.send(error)
     }
 })
 

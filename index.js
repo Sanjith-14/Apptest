@@ -14,7 +14,7 @@ dotenv.config()
 
 // Connection
 mongoose.connect(process.env.MONGODB_URL,
-    // { useNewUrlParser: true, useUnifiedTopology: true },  //optoinal.
+    { useNewUrlParser: true, useUnifiedTopology: true },  //optoinal.
     ()=>{
         console.log("DB connected..")
     }
@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URL,
 
 app.use("/",router)
 
-app.listen(process.env.PORT ||8080,()=>{
+app.listen((process.env.PORT || 8080),()=>{
     console.log("Server is rocking..")
 })
 
